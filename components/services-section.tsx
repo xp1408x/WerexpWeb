@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Globe, Smartphone, Cpu, ArrowRight, Palette, ShoppingCart, Zap } from "lucide-react"
+import { Globe, Smartphone, Cpu, ArrowRight, Palette, ShoppingCart, Zap, Megaphone } from "lucide-react"
 
 const services = [
   {
@@ -11,7 +11,7 @@ const services = [
     features: ["Diseño UX/UI", "Branding digital", "Wireframes", "Prototipos interactivos"],
   },
   {
-    icon: Globe,
+    icon: Smartphone,
     title: "Desarrollo de aplicaciones móviles",
     description: "Apps nativas e híbridas para iOS y Android con experiencias de usuario excepcionales.",
     features: ["iOS & Android", "React Native", "Flutter", "Apps empresariales"],
@@ -29,17 +29,17 @@ const services = [
     features: ["SEO técnico", "Contenido optimizado", "Link building", "Analytics"],
   },
   {
-    icon: ShoppingCart,
-    title: "Diseño UX/UI",
-    description: "Interfaces centradas en el usuario que maximizan la conversión y la satisfacción.",
-    features: ["Research UX", "Design Systems", "Testing A/B", "Prototipado"],
+    icon: Megaphone,
+    title: "Marketing Digital Estratégico",
+    description: "Impulsa tu marca con estrategias digitales personalizadas que generan resultados medibles y un crecimiento sostenible.",
+    features: ["Estrategia de Contenidos", "Publicidad Digital (SEM/PPC)", "Marketing en Redes Sociales", "Analítica Web y ROI"],
   },
   {
-    icon: Smartphone,
-    title: "Páginas web que venden",
-    description: "Landing pages y sitios web optimizados para convertir visitantes en clientes.",
-    features: ["Conversión optimizada", "CRO", "Analytics", "Testing multivariante"],
-  },
+    icon: ShoppingCart,
+    title: "Diseño UX/UI",
+    description: "Interfaces centradas en el usuario que maximizan la conversión y la satisfacción para plasmar la idea en el producto.",
+    features: ["Research UX", "Design Systems", "Testing A/B", "Prototipado"],
+  }
 ]
 
 export default function ServicesSection() {

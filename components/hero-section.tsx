@@ -43,22 +43,9 @@ export default function HeroSection() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-5xl mx-auto">
-          {/* Logo Section */}
-          <div className="flex justify-center items-center mb-8">
-            <div className="relative">
-              <div className="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center transform rotate-12 backdrop-blur-sm">
-                <div className="w-12 h-12 bg-white/30 rounded-lg transform -rotate-12"></div>
-              </div>
-              <div className="absolute -top-2 -right-2 w-12 h-12 bg-white/20 rounded-xl transform rotate-45 opacity-80"></div>
-            </div>
-            <div className="ml-6">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight">Werexp</h1>
-              <p className="text-xl text-white/90 font-medium">Technology & Strategy</p>
-            </div>
-          </div>
 
           <div className="mb-8">
-            <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full text-lg font-medium mb-8">
+            <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full text-lg font-medium">
               <Sparkles className="w-5 h-5" />
               <span>Somos una agencia de diseño y desarrollo digital de nueva generación</span>
             </div>
@@ -114,7 +101,7 @@ export default function HeroSection() {
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
               <Cpu className="w-8 h-8 text-white mx-auto mb-3" />
               <h3 className="text-white font-bold mb-2">Tecnología Inmersiva</h3>
-              <p className="text-white/80 text-sm">Realidad aumentada y soluciones AR</p>
+              <p className="text-white/80 text-sm">Realidad aumentada y realidad virtual</p>
             </div>
           </div>
         </div>

@@ -30,7 +30,7 @@ const benefits = [
   {
     icon: Rocket,
     title: "Visión Colaborativa",
-    description: "Trabajamos como parte de tu equipo, no solo como proveedores externos.",
+    description: "Trabajamos como parte de tu equipo, no sólo como proveedores externos.",
   },
 ]
 
@@ -39,7 +39,7 @@ export default function WhyChooseUsSection() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#2D2D2D] mb-4">¿Por Qué Elegir Werexp?</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#2D2D2D] mb-4">¿Por qué elegir Werexp?</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Nuestros valores diferenciales nos convierten en el socio ideal para tu transformación digital
           </p>

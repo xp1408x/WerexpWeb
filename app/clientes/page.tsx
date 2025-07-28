@@ -160,7 +160,7 @@ export default function ClientesPage() {
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-[#2D2D2D] mb-4">Casos de Éxito</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Proyectos reales que demuestran nuestro compromiso con la excelencia y los resultados
+                Proyectos que demuestran nuestro compromiso con la excelencia y los resultados
               </p>
             </div>
 
@@ -245,7 +245,7 @@ export default function ClientesPage() {
               <h2 className="text-3xl sm:text-4xl font-bold mb-6">¿Listo para ser nuestro próximo caso de éxito?</h2>
               <p className="text-xl mb-8 text-white/90">
                 Mira lo que podemos hacer por ti. Cuéntanos tu idea y transformémosla juntos en una solución digital que
-                genere resultados reales.
+                genere resultados.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
