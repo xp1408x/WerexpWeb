@@ -11,6 +11,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mail, Phone, MapPin, Clock, MessageCircle, Send } from "lucide-react"
+import AsistenteDigitalApp from "@/components/asistente-digital/App";
 
 export default function ContactoPage() {
   const [formData, setFormData] = useState({
@@ -54,94 +55,20 @@ export default function ContactoPage() {
         <section className="py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12">
-              {/* Contact Form */}
+              {/* Asistente de Soluciones Digitales Integration */}
               <div>
                 <Card className="border-0 shadow-lg rounded-2xl">
                   <CardHeader>
                     <CardTitle className="text-2xl font-bold text-[#2D2D2D] flex items-center space-x-2">
                       <MessageCircle className="w-6 h-6 text-[#00CFFF]" />
-                      <span>Cuéntanos tu idea</span>
+                      <span>Asistente de Soluciones Digitales WerexIA</span>
                     </CardTitle>
-                    <CardDescription>Completa el formulario y te contactaremos en menos de 24 horas</CardDescription>
+                    <CardDescription>
+                      Utiliza nuestro asistente impulsado por IA para explorar soluciones digitales personalizadas para tu negocio.
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div>
-                          <label className="block text-sm font-medium text-[#2D2D2D] mb-2">Nombre completo *</label>
-                          <Input
-                            type="text"
-                            required
-                            value={formData.nombre}
-                            onChange={(e) => handleInputChange("nombre", e.target.value)}
-                            className="rounded-xl border-gray-200 focus:border-[#00CFFF] focus:ring-[#00CFFF]"
-                            placeholder="Tu nombre completo"
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-sm font-medium text-[#2D2D2D] mb-2">Correo electrónico *</label>
-                          <Input
-                            type="email"
-                            required
-                            value={formData.email}
-                            onChange={(e) => handleInputChange("email", e.target.value)}
-                            className="rounded-xl border-gray-200 focus:border-[#00CFFF] focus:ring-[#00CFFF]"
-                            placeholder="tu@email.com"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div>
-                          <label className="block text-sm font-medium text-[#2D2D2D] mb-2">Teléfono (opcional)</label>
-                          <Input
-                            type="tel"
-                            value={formData.telefono}
-                            onChange={(e) => handleInputChange("telefono", e.target.value)}
-                            className="rounded-xl border-gray-200 focus:border-[#00CFFF] focus:ring-[#00CFFF]"
-                            placeholder="+51 999 999 999"
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-sm font-medium text-[#2D2D2D] mb-2">Tipo de proyecto *</label>
-                          <Select
-                            value={formData.tipoProyecto}
-                            onValueChange={(value) => handleInputChange("tipoProyecto", value)}
-                          >
-                            <SelectTrigger className="rounded-xl border-gray-200 focus:border-[#00CFFF] focus:ring-[#00CFFF]">
-                              <SelectValue placeholder="Selecciona el tipo" />
-                            </SelectTrigger>
-                            <SelectContent>
-                              <SelectItem value="web">Desarrollo Web</SelectItem>
-                              <SelectItem value="mobile">Aplicación Móvil</SelectItem>
-                              <SelectItem value="custom">Solución a Medida</SelectItem>
-                              <SelectItem value="ar">Realidad Aumentada</SelectItem>
-                              <SelectItem value="consulting">Consultoría Digital</SelectItem>
-                              <SelectItem value="other">Otro</SelectItem>
-                            </SelectContent>
-                          </Select>
-                        </div>
-                      </div>
-
-                      <div>
-                        <label className="block text-sm font-medium text-[#2D2D2D] mb-2">Describe tu proyecto *</label>
-                        <Textarea
-                          required
-                          value={formData.mensaje}
-                          onChange={(e) => handleInputChange("mensaje", e.target.value)}
-                          className="rounded-xl border-gray-200 focus:border-[#00CFFF] focus:ring-[#00CFFF] min-h-[120px]"
-                          placeholder="Cuéntanos sobre tu idea, objetivos, presupuesto estimado y cualquier detalle relevante..."
-                        />
-                      </div>
-
-                      <Button
-                        type="submit"
-                        className="w-full bg-[#00CFFF] hover:bg-[#00b6e0] text-white font-medium py-3 rounded-xl shadow-md transition-all duration-300"
-                      >
-                        <Send className="w-4 h-4 mr-2" />
-                        Enviar mensaje
-                      </Button>
-                    </form>
+                    <AsistenteDigitalApp />
                   </CardContent>
                 </Card>
               </div>
