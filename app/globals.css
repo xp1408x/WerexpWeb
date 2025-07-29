@@ -66,6 +66,10 @@
   h6 {
     font-family: "Maquette", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
+
+  h1 {
+    font-size: 2.25rem; /* Equivalent to text-4xl */
+  }
 }
 
 /* Custom scrollbar */

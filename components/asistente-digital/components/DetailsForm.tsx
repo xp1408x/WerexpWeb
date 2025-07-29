@@ -20,13 +20,13 @@ const DetailsForm: React.FC<DetailsFormProps> = ({ selectedOption, onSubmit }) =
 
   return (
     <div className="bg-white p-8 rounded-2xl shadow-lg w-full animate-fade-in">
-      <h2 className="text-2xl font-bold text-slate-800 mb-4">Casi hemos terminado</h2>
+      <h4 className="text-2xl font-bold text-slate-800 mb-4">Casi hemos terminado</h4>
       <p className="text-slate-600 mb-6">Completa el último paso. Déjanos tu correo electrónico para contactarte y, si quieres, añade cualquier detalle adicional a tu solicitud.</p>
 
       <div className="grid md:grid-cols-2 gap-8">
         <div className="bg-slate-100 p-6 rounded-lg border border-slate-200">
-          <h3 className="text-lg font-bold text-blue-700 mb-2">Tu opción seleccionada:</h3>
-          <h4 className="text-xl font-semibold text-slate-800 mb-3">{selectedOption.title}</h4>
+          <h5 className="text-lg font-bold text-blue-700 mb-2">Tu opción seleccionada:</h5>
+          <h6 className="text-xl font-semibold text-slate-800 mb-3">{selectedOption.title}</h6>
           <p className="text-slate-600">{selectedOption.description}</p>
         </div>
 

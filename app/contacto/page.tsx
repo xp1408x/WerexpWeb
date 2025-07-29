@@ -59,10 +59,10 @@ export default function ContactoPage() {
               <div>
                 <Card className="border-0 shadow-lg rounded-2xl">
                   <CardHeader>
-                    <CardTitle className="text-2xl font-bold text-[#2D2D2D] flex items-center space-x-2">
+                    <h2 className="text-2xl font-bold text-[#2D2D2D] flex items-center space-x-2">
                       <MessageCircle className="w-6 h-6 text-[#00CFFF]" />
                       <span>Asistente de Soluciones Digitales WerexIA</span>
-                    </CardTitle>
+                    </h2>
                     <CardDescription>
                       Utiliza nuestro asistente impulsado por IA para explorar soluciones digitales personalizadas para tu negocio.
                     </CardDescription>
@@ -77,7 +77,7 @@ export default function ContactoPage() {
               <div className="space-y-8">
                 <Card className="border-0 shadow-lg rounded-2xl bg-gradient-to-br from-[#00CFFF] to-[#1565FF] text-white">
                   <CardContent className="p-8">
-                    <h3 className="text-2xl font-bold mb-6">Información de Contacto</h3>
+                    <h2 className="text-2xl font-bold mb-6">Información de Contacto</h2>
 
                     <div className="space-y-6">
                       <div className="flex items-start space-x-4">
@@ -122,7 +122,7 @@ export default function ContactoPage() {
 
                 <Card className="border-0 shadow-lg rounded-2xl">
                   <CardContent className="p-8">
-                    <h3 className="text-xl font-bold text-[#2D2D2D] mb-4">¿Qué puedes esperar?</h3>
+                    <h2 className="text-xl font-bold text-[#2D2D2D] mb-4">¿Qué puedes esperar?</h2>
                     <ul className="space-y-3">
                       <li className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-[#00CFFF] rounded-full mt-2 flex-shrink-0"></div>

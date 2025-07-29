@@ -51,13 +51,13 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-8">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-8">
             Transformamos{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[#00CCDD]">Ideas</span> en{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00CCDD] to-white">
               Experiencias Digitales
             </span>
-          </h2>
+          </h1>
 
           <p className="text-xl sm:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed">
             Fusionamos creatividad y tecnología inmersiva con estrategias de marketing probadas para transformar la
@@ -87,6 +87,7 @@ export default function HeroSection() {
           </div>
 
           {/* Services Preview */}
+          <h2 className="sr-only">Nuestros Servicios Destacados</h2> {/* Visually hidden h2 */}
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
               <Code className="w-8 h-8 text-white mx-auto mb-3" />

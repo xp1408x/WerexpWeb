@@ -136,7 +136,7 @@ export default function ServiciosPage() {
                   <div className={index % 2 === 1 ? "lg:col-start-1" : ""}>
                     <Card className="border-0 shadow-lg bg-gradient-to-br from-white to-[#E5E8EC]/30 rounded-2xl">
                       <CardHeader>
-                        <CardTitle className="text-xl font-bold text-[#2D2D2D]">Beneficios incluidos</CardTitle>
+                        <h3 className="text-xl font-bold text-[#2D2D2D]">Beneficios incluidos</h3>
                       </CardHeader>
                       <CardContent>
                         <ul className="space-y-3">

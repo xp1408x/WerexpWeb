@@ -11,7 +11,7 @@ interface SolutionCardProps {
 const SolutionCard: React.FC<SolutionCardProps> = ({ option, onSelect }) => {
   return (
     <div className="bg-white rounded-2xl shadow-md p-6 border border-transparent hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col">
-      <h3 className="text-xl font-bold text-slate-800 mb-3">{option.title}</h3>
+      <h5 className="text-xl font-bold text-slate-800 mb-3">{option.title}</h5>
       <p className="text-slate-600 flex-grow mb-6">{option.description}</p>
       <button
         onClick={onSelect}
