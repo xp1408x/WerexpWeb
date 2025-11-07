@@ -1,6 +1,9 @@
+import React from "react"
+import TeamGrid from "@/components/TeamGrid"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Users, Target, Lightbulb, Heart, Award, Rocket } from "lucide-react"
 import { Linkedin } from "lucide-react"
@@ -36,39 +39,47 @@ const valores = [
 const equipo = [
 	{
 		name: "Pedro Cortez",
+		country: "pe",
 		position: "CEO & Co-fundador / Mobile Tech Leader",
 		description:
 			"Lider técnico mobile, arquitecto de software y desarrollo de productos con más de 15 años de experiencia.",
-		avatar: "/placeholder.svg?height=200&width=200",
+		avatar: "/images/aboutUs1.webp",
 		skills: [
 			"Mobile Developer",
 			"Product Management",
 			"Software Architecture",
 		],
+		linkedin: "https://www.linkedin.com/in/pedro-cortez-a407b715b/",
 	},
 	{
 		name: "Grecia Gonzalez",
+		country: "hn",
 		position: "Web Designer",
 		description:
 			"Especialista en arquitectura de software y tecnologías emergentes como AR/VR.",
 		avatar: "/placeholder.svg?height=200&width=200",
 		skills: ["Prompt Engineer", "AR/VR", "Cloud Computing"],
+		linkedin: null,
 	},
 	{
 		name: "Ricardo Cortez",
+		country: "pe",
 		position: "Web Developer",
 		description:
 			"Desarrollador full-stack con expertise en React, Node.js y desarrollo backend.",
-		avatar: "/placeholder.svg?height=200&width=200",
+		avatar: "/images/aboutUs3.webp",
 		skills: ["React", "Node.js", "Backend Development"],
+		linkedin: "https://www.linkedin.com/in/ricardo-cortez-86191a16b/",
 	},
 	{
 		name: "Ruben Tarantini",
+		country: "us",
 		position: "Lead UX/UI Designer",
 		description:
 			"Creador de conceptos visuales innovadores que comunican efectivamente la identidad de la marca y el mensaje del proyecto.",
-		avatar: "/placeholder.svg?height=200&width=200",
+		avatar: "/images/aboutUs4.webp",
 		skills: ["UX Research", "UI Design", "Marketing Strategy"],
+		linkedin: "https://www.linkedin.com/in/rubenboost/",
 	},
 ]
 
@@ -182,74 +193,7 @@ export default function AcercaDePage() {
 							</p>
 						</div>
 
-						<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-							{equipo.map((miembro, index) => (
-								<Card
-									key={index}
-									className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white rounded-2xl overflow-hidden"
-								>
-									<div className="relative">
-										<img
-											src={miembro.avatar || "/placeholder.svg"}
-											alt={miembro.name}
-											className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-										/>
-										<div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-									</div>
-									<CardContent className="p-6">
-										<h3 className="text-xl font-bold text-[#2D2D2D] mb-1 flex items-center">
-											{miembro.name}
-											{miembro.name === "Pedro Cortez" && (
-												<a
-													href="https://www.linkedin.com/in/pedro-cortez-a407b715b/"
-													target="_blank"
-													rel="noopener noreferrer"
-													className="ml-2"
-												>
-													<Linkedin className="w-5 h-5 text-[#0077B5]" />
-												</a>
-											)}
-											{miembro.name === "Ricardo Cortez" && (
-												<a
-													href="https://www.linkedin.com/in/ricardo-cortez-86191a16b/"
-													target="_blank"
-													rel="noopener noreferrer"
-													className="ml-2"
-												>
-													<Linkedin className="w-5 h-5 text-[#0077B5]" />
-												</a>
-											)}
-											{miembro.name === "Ruben Tarantini" && (
-												<a
-													href="https://www.linkedin.com/in/rubenboost/"
-													target="_blank"
-													rel="noopener noreferrer"
-													className="ml-2"
-												>
-													<Linkedin className="w-5 h-5 text-[#0077B5]" />
-												</a>
-											)}
-										</h3>
-										<p className="text-[#1565FF] font-medium mb-3">
-											{miembro.position}
-										</p>
-										<p className="text-gray-600 text-sm mb-4 leading-relaxed">
-											{miembro.description}
-										</p>
-										<div className="flex flex-wrap gap-2">
-											{miembro.skills.map((skill, skillIndex) => (
-												<span
-													key={skillIndex}
-													className="bg-[#00CFFF]/10 text-[#1565FF] px-2 py-1 rounded-full text-xs font-medium"
-												>
-													{skill}
-												</span>
-											))}
-										</div>
-									</CardContent>
-								</Card>
-							))}
-						</div>
+									<TeamGrid equipo={equipo} />
 					</div>
 				</section>
 
@@ -321,86 +265,65 @@ export default function AcercaDePage() {
 
 				{/* Historia */}
 				<section className="py-20">
-					<div className="container mx-auto px-4 sm:px-6 lg:px-8">
-						<div className="max-w-4xl mx-auto">
-							<div className="text-center mb-12">
-								<h2 className="text-3xl sm:text-4xl font-bold text-[#2D2D2D] mb-4">
-									Nuestra Historia
-								</h2>
-								<p className="text-lg text-gray-600">
-									El camino que nos trajo hasta aquí
-								</p>
-							</div>
-
-							<div className="space-y-8">
-								<Card className="border-0 shadow-lg rounded-2xl">
-									<CardContent className="p-8">
-										<div className="flex items-start space-x-4">
-											<div className="w-12 h-12 bg-gradient-to-br from-[#00CFFF] to-[#1565FF] rounded-full flex items-center justify-center flex-shrink-0">
-												<span className="text-white font-bold">2022</span>
-											</div>
-											<div>
-												<h3 className="text-xl font-bold text-[#2D2D2D] mb-2">
-													Los Inicios
-												</h3>
-												<p className="text-gray-600">
-													Werexp nació de la visión de dos desarrolladores
-													apasionados por crear soluciones digitales que
-													really impacten. Comenzamos trabajando desde casa,
-													enfocándonos en proyectos web para pequeñas
-													empresas locales.
-												</p>
-											</div>
+								<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+									<div className="max-w-4xl mx-auto">
+										<div className="text-center mb-12">
+											<h2 className="text-3xl sm:text-4xl font-bold text-[#2D2D2D] mb-4">
+												Nuestra Historia
+											</h2>
+											<p className="text-lg text-gray-600">
+												El camino que nos trajo hasta aquí
+											</p>
 										</div>
-									</CardContent>
-								</Card>
-
-								<Card className="border-0 shadow-lg rounded-2xl">
-									<CardContent className="p-8">
-										<div className="flex items-start space-x-4">
-											<div className="w-12 h-12 bg-gradient-to-br from-[#1565FF] to-[#00CFFF] rounded-full flex items-center justify-center flex-shrink-0">
-												<span className="text-white font-bold">2023</span>
-											</div>
-											<div>
-												<h3 className="text-xl font-bold text-[#2D2D2D] mb-2">
-													Expansión y Especialización
-												</h3>
-												<p className="text-gray-600">
-													Incorporamos especialistas en UX/UI y comenzamos a
-													trabajar con tecnologías emergentes como realidad
-													aumentada. Nuestro equipo creció y empezamos a
-													atender clientes corporativos con proyectos más
-													complejos.
-												</p>
-											</div>
+										<div className="space-y-8">
+											<Card className="border-0 shadow-lg rounded-2xl">
+												<CardContent className="p-8">
+													<div className="flex items-start space-x-4">
+														<div className="w-12 h-12 bg-gradient-to-br from-[#00CFFF] to-[#1565FF] rounded-full flex items-center justify-center flex-shrink-0">
+															<span className="text-white font-bold">2019</span>
+														</div>
+														<div>
+															<h3 className="text-xl font-bold text-[#2D2D2D] mb-2">Un Encuentro de Destino</h3>
+															<p className="text-gray-600">
+																En una empresa de networking, Pedro —un apasionado especialista en iOS— y Rubén —un creativo experto en diseño y marketing— cruzaron caminos. Sus conversaciones sobre tecnología, creatividad y futuro encendieron una chispa de colaboración. Aunque la vida los llevó por rutas distintas, la semilla de una visión compartida quedó plantada.
+															</p>
+														</div>
+													</div>
+												</CardContent>
+											</Card>
+											<Card className="border-0 shadow-lg rounded-2xl">
+												<CardContent className="p-8">
+													<div className="flex items-start space-x-4">
+														<div className="w-12 h-12 bg-gradient-to-br from-[#1565FF] to-[#00CFFF] rounded-full flex items-center justify-center flex-shrink-0">
+															<span className="text-white font-bold">2023</span>
+														</div>
+														<div>
+															<h3 className="text-xl font-bold text-[#2D2D2D] mb-2">Nuevas Alianzas, Nuevos Sueños</h3>
+															<p className="text-gray-600">
+																Años después, Pedro, siempre inquieto por la innovación, conoce a Grecia, una desarrolladora y diseñadora web con una mirada fresca y disruptiva. Juntos, comienzan a imaginar proyectos que combinan tecnología y diseño, sumando nuevas perspectivas a la visión original.
+															</p>
+														</div>
+													</div>
+												</CardContent>
+											</Card>
+											<Card className="border-0 shadow-lg rounded-2xl">
+												<CardContent className="p-8">
+													<div className="flex items-start space-x-4">
+														<div className="w-12 h-12 bg-gradient-to-br from-[#00CFFF] to-[#1565FF] rounded-full flex items-center justify-center flex-shrink-0">
+															<span className="text-white font-bold">2025</span>
+														</div>
+														<div>
+															<h3 className="text-xl font-bold text-[#2D2D2D] mb-2">El Nacimiento de Werexp</h3>
+															<p className="text-gray-600">
+																El equipo se completa con la llegada de Ricardo, un desarrollador full-stack con talento para el backend y el frontend. Es entonces cuando las piezas encajan: la experiencia de Pedro en mobile, la creatividad de Rubén, la visión digital de Grecia y la solidez técnica de Ricardo dan vida a Werexp. Así, la idea que nació años atrás se convierte en una realidad: un equipo multidisciplinario listo para transformar ideas en soluciones digitales con impacto real.
+															</p>
+														</div>
+													</div>
+												</CardContent>
+											</Card>
 										</div>
-									</CardContent>
-								</Card>
-
-								<Card className="border-0 shadow-lg rounded-2xl">
-									<CardContent className="p-8">
-										<div className="flex items-start space-x-4">
-											<div className="w-12 h-12 bg-gradient-to-br from-[#00CFFF] to-[#1565FF] rounded-full flex items-center justify-center flex-shrink-0">
-												<span className="text-white font-bold">2024</span>
-											</div>
-											<div>
-												<h3 className="text-xl font-bold text-[#2D2D2D] mb-2">
-													Consolidación y Futuro
-												</h3>
-												<p className="text-gray-600">
-													Hoy somos un equipo consolidado de especialistas
-													digitales, reconocidos por nuestra capacidad de
-													innovación y calidad técnica. Continuamos creciendo
-													y explorando nuevas tecnologías para ofrecer
-													 soluciones cada vez más impactantes.
-												</p>
-											</div>
-										</div>
-									</CardContent>
-								</Card>
-							</div>
-						</div>
-					</div>
+									</div>
+								</div>
 				</section>
 			</main>
 

@@ -84,8 +84,8 @@ export default function ContactoPage() {
                         <Mail className="w-6 h-6 mt-1 flex-shrink-0" />
                         <div>
                           <h4 className="font-medium mb-1">Correo Electrónico</h4>
-                          <a href="mailto:hola@werexp.com" className="text-white/90 hover:text-white transition-colors">
-                            hola@werexp.com
+                          <a href="mailto:info@werexp.com" className="text-white/90 hover:text-white transition-colors">
+                            info@werexp.com
                           </a>
                         </div>
                       </div>
@@ -94,8 +94,8 @@ export default function ContactoPage() {
                         <Phone className="w-6 h-6 mt-1 flex-shrink-0" />
                         <div>
                           <h4 className="font-medium mb-1">Teléfono</h4>
-                          <a href="tel:+51999999999" className="text-white/90 hover:text-white transition-colors">
-                            +51 999 999 999
+                          <a href="tel:+51984342126" className="text-white/90 hover:text-white transition-colors">
+                            +51 984 342 126 
                           </a>
                         </div>
                       </div>

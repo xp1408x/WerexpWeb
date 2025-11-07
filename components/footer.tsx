@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Linkedin, Twitter, Mail, Phone, MapPin } from "lucide-react"
 
 export default function Footer() {
@@ -9,16 +10,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-br from-[#0066AA] to-[#00AACC] rounded-lg flex items-center justify-center transform rotate-12">
-                  <div className="w-6 h-6 bg-white/20 rounded-sm transform -rotate-12"></div>
-                </div>
-                <div className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-br from-[#00AACC] to-[#00CCDD] rounded-md transform rotate-45 opacity-80"></div>
-              </div>
-              <div>
-                <span className="text-2xl font-bold tracking-tight">Werexp</span>
-                <div className="text-xs text-[#00AACC] font-medium -mt-1">Technology & Strategy</div>
-              </div>
+              <Image
+                src="/images/logoWerexpWeb.png"
+                alt="Werexp Logo"
+                width={240}
+                height={50}
+                priority
+              />
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
               Somos una agencia de diseño y desarrollo digital de nueva generación. Fusionamos creatividad y tecnología
@@ -26,16 +24,20 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.linkedin.com/company/werexp/"
                 className="w-10 h-10 bg-[#0066AA] rounded-lg flex items-center justify-center hover:bg-[#00AACC] transition-colors"
                 aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://x.com/Werexp1408"
                 className="w-10 h-10 bg-[#0066AA] rounded-lg flex items-center justify-center hover:bg-[#00AACC] transition-colors"
                 aria-label="Twitter"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Twitter className="w-5 h-5" />
               </a>
@@ -80,14 +82,14 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-[#00AACC]" />
-                <a href="mailto:hola@werexp.com" className="text-gray-300 hover:text-[#00AACC] transition-colors">
-                  hola@werexp.com
+                <a href="mailto:info@werexp.com" className="text-gray-300 hover:text-[#00AACC] transition-colors">
+                  info@werexp.com
                 </a>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-[#00AACC]" />
-                <a href="tel:+51999999999" className="text-gray-300 hover:text-[#00AACC] transition-colors">
-                  +51 999 999 999
+                <a href="tel:+51984342126" className="text-gray-300 hover:text-[#00AACC] transition-colors">
+                  +51 984 342 126
                 </a>
               </li>
               <li className="flex items-start space-x-2">
