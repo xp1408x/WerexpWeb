@@ -6,13 +6,16 @@ import { Badge } from "@/components/ui/badge"
 import { TrendingUp, Users, Zap, Star, Quote } from "lucide-react"
 import Link from "next/link"
 
+// Lista de clientes de ejemplo. Reemplaza `logo` con la ruta a tu archivo en /public/logos/<nombre>.(png|svg)
+// Por ejemplo: "/logos/techstart.svg". Si no tienes logos todavía, usamos el placeholder.
 const clientesLogos = [
-  { name: "TechStart", logo: "/placeholder.svg?height=60&width=120" },
-  { name: "InnovaLab", logo: "/placeholder.svg?height=60&width=120" },
-  { name: "EcoSolutions", logo: "/placeholder.svg?height=60&width=120" },
-  { name: "DigitalFlow", logo: "/placeholder.svg?height=60&width=120" },
-  { name: "SmartBiz", logo: "/placeholder.svg?height=60&width=120" },
-  { name: "CloudTech", logo: "/placeholder.svg?height=60&width=120" },
+  { name: "TechStart", logo: "/logos/techstart.svg", website: "https://techstart.example" , tagline: "Retail & eCommerce"},
+  { name: "InnovaLab", logo: "/logos/innovalab.svg", website: "https://innovalab.example", tagline: "Consultoría Digital"},
+  { name: "EcoSolutions", logo: "/logos/ecosolutions.svg", website: "https://ecosolutions.example", tagline: "Sostenibilidad"},
+  { name: "DigitalFlow", logo: "/logos/digitalflow.svg", website: "https://digitalflow.example", tagline: "Medios & Marketing"},
+  { name: "SmartBiz", logo: "/logos/smartbiz.svg", website: "https://smartbiz.example", tagline: "FinTech"},
+  { name: "CloudTech", logo: "/logos/cloudtech.svg", website: "https://cloudtech.example", tagline: "Cloud & DevOps"},
+  // Añade más clientes aquí según lo necesites
 ]
 
 const casosDeExito = [
@@ -139,23 +142,28 @@ export default function ClientesPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
               {clientesLogos.map((cliente, index) => (
-                <div
+                <a
                   key={index}
-                  className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center"
+                  href={cliente.website ?? '#'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center justify-center text-center"
                 >
                   <img
                     src={cliente.logo || "/placeholder.svg"}
                     alt={cliente.name}
-                    className="max-h-12 w-auto opacity-70 hover:opacity-100 transition-opacity"
+                    className="max-h-12 w-auto opacity-80 group-hover:opacity-100 transition-opacity"
                   />
-                </div>
+                  {/* Keep accessible name for screen readers only */}
+                  <span className="sr-only">{cliente.name}</span>
+                </a>
               ))}
             </div>
           </div>
         </section>
 
         {/* Casos de Éxito */}
-        <section className="py-20">
+        {/*<section className="py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-[#2D2D2D] mb-4">Casos de Éxito</h2>
@@ -237,7 +245,7 @@ export default function ClientesPage() {
             </div>
           </div>
         </section>
-
+*/}
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-br from-[#1565FF] to-[#00CFFF]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -13,18 +13,15 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
-            <div className="relative">
-              <div className="w-10 h-10 bg-gradient-to-br from-[#0066AA] to-[#00AACC] rounded-lg flex items-center justify-center transform rotate-12">
-                <div className="w-6 h-6 bg-white/20 rounded-sm transform -rotate-12"></div>
-              </div>
-              <div className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-br from-[#00AACC] to-[#00CCDD] rounded-md transform rotate-45 opacity-80"></div>
-            </div>
-            <div>
-              <span className="text-2xl font-bold text-[#1A1A1A] tracking-tight">Werexp</span>
-              <div className="text-xs text-[#0066AA] font-medium -mt-1">Technology & Strategy</div>
-            </div>
+          {/* Logo image (Werexp) */}
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/logoWerexpWeb.png"
+              alt="Werexp"
+              width={200}
+              height={80}
+              className="object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}

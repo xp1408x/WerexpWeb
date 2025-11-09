@@ -14,7 +14,6 @@ export default function HomePage() {
         <HeroSection />
         <ServicesSection />
         <WhyChooseUsSection />
-        <TestimonialsSection />
         <FinalCTASection />
       </main>
       <Footer />
