@@ -142,11 +142,8 @@ export default function ClientesPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
               {clientesLogos.map((cliente, index) => (
-                <a
+                <div
                   key={index}
-                  href={cliente.website ?? '#'}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="group bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center justify-center text-center"
                 >
                   <img
@@ -156,7 +153,7 @@ export default function ClientesPage() {
                   />
                   {/* Keep accessible name for screen readers only */}
                   <span className="sr-only">{cliente.name}</span>
-                </a>
+                </div>
               ))}
             </div>
           </div>

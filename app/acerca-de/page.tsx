@@ -74,9 +74,9 @@ const equipo = [
 	{
 		name: "Ruben Tarantini",
 		country: "us",
-		position: "Lead UX/UI Designer",
+		position: "Executive AI Creative Director",
 		description:
-			"Creador de conceptos visuales innovadores que comunican efectivamente la identidad de la marca y el mensaje del proyecto.",
+			"Desarrollar y supervisar la estrategia creativa impulsada por IA para proyectos digitales en empresa o agencia.",
 		avatar: "/images/aboutUs4.webp",
 		skills: ["UX Research", "UI Design", "Marketing Strategy"],
 		linkedin: "https://www.linkedin.com/in/rubenboost/",

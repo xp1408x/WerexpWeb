@@ -47,7 +47,7 @@ export default function HeroSection() {
           <div className="mb-8">
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full text-lg font-medium">
               <Sparkles className="w-5 h-5" />
-              <span>Somos una agencia de diseño y desarrollo digital de nueva generación</span>
+              <span>Werexp: Agencia de diseño y desarrollo digital de nueva generación</span>
             </div>
           </div>
 
@@ -60,7 +60,7 @@ export default function HeroSection() {
           </h1>
 
           <p className="text-xl sm:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Fusionamos creatividad y tecnología inmersiva con estrategias de marketing probadas para transformar la
+            En Werexp, fusionamos creatividad y tecnología inmersiva con estrategias de marketing probadas para transformar la
             presencia online en un motor de crecimiento constante para tu empresa.
           </p>
 

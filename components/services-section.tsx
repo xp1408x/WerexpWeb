@@ -79,10 +79,11 @@ export default function ServicesSection() {
                   ))}
                 </ul>
                 <Button
+                  asChild
                   variant="outline"
                   className="w-full border-[#0066AA] text-[#0066AA] hover:bg-[#0066AA] hover:text-white rounded-xl transition-all duration-300 bg-transparent"
                 >
-                  Más información
+                  <Link href="/contacto">Más información</Link>
                 </Button>
               </CardContent>
             </Card>
