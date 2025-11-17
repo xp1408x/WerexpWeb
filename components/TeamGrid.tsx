@@ -24,12 +24,12 @@ export default function TeamGrid({ equipo }: { equipo: TeamMember[] }) {
             key={index}
             className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white rounded-2xl overflow-hidden"
           >
-            <div className="relative w-full h-48">
+            <div className="relative w-full pt-[100%] overflow-hidden rounded-t-2xl"> {/* Contenedor para relación de aspecto 1:1 con redondeado y overflow */}
               <Image
                 src={miembro.avatar}
                 alt={miembro.name}
                 fill
-                className="object-cover object-center rounded-t-2xl group-hover:scale-105 transition-transform duration-300"
+                className="absolute inset-0 object-contain object-center group-hover:scale-105 transition-transform duration-300"
                 sizes="(max-width: 768px) 100vw, 400px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>

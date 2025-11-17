@@ -37,13 +37,37 @@ function AsistenteDigitalApp() {
     setAppState(AppState.DETAILS_INPUT);
   }, []);
   
-  const handleDetailsSubmit = useCallback((details: string, email: string) => {
-    console.log("Solicitud Final Enviada:");
-    console.log("Idea Original:", userIdea);
-    console.log("Opción Seleccionada:", selectedOption?.title);
-    console.log("Email de Contacto:", email);
-    console.log("Detalles Adicionales:", details);
-    setAppState(AppState.CONFIRMATION);
+  const handleDetailsSubmit = useCallback(async (details: string, email: string) => {
+    setAppState(AppState.LOADING); // Mostrar spinner mientras se envía
+    setError(null);
+
+    const formData = {
+      email: email,
+      idea: userIdea,
+      solucion_titulo: selectedOption?.title || 'No seleccionada',
+      solucion: selectedOption?.description || 'No disponible',
+      detalles: details,
+    };
+
+    try {
+      const response = await fetch('https://formspree.io/f/xvgveejr', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setAppState(AppState.CONFIRMATION);
+      } else {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Error al enviar el formulario a Formspree.');
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Ocurrió un error desconocido al enviar el formulario.");
+      setAppState(AppState.ERROR); // Mostrar pantalla de error
+    }
   }, [userIdea, selectedOption]);
 
   const handleReset = useCallback(() => {
