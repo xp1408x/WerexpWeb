@@ -72,7 +72,7 @@ const equipo = [
 		linkedin: "https://www.linkedin.com/in/ricardo-cortez-86191a16b/",
 	},
 	{
-		name: "Ruben Tarantini",
+		name: "Ruben's Boost",
 		country: "us",
 		position: "Executive AI Creative Director",
 		description:
